@@ -1,0 +1,161 @@
+/* Секция "Подвал" */
+.footer {
+  width: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $footer-background-color;
+
+  .footer__body {
+    display: flex;
+    align-items: baseline;
+  }
+  .footer__link-logo {
+    @extend %title__logo;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .footer__link-logo-color {
+    color: $body-light-text-color;
+  }
+  .footer__address {
+    margin-right: 70px;
+  }
+  .footer__list {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+    list-style: none;
+  }
+  .footer__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .footer__link {
+    @extend %title__text;
+    @include animation(color);
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $body-default-logo-color;
+    }
+  }
+  .footer__link-light {
+    color: $body-light-text-color;
+  }
+  .footer__link-dark {
+    color: $footer-text-color;
+  }
+
+  .footer__social {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .footer__title {
+    @extend %title__header-h3;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: $body-light-text-color;
+  }
+  .footer__list-social {
+    display: inline-flex;
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .footer__item-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $footer-icon-color;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+  }
+  .footer__item-social:not(:last-child) {
+    margin-right: 10px;
+  }
+  .footer__link-social {
+    @include animation(background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $body-default-logo-color;
+    }
+  }
+  .footer__icon {
+    @include animation(fill);
+    fill: $body-light-text-color;
+  }
+  .footer__form {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .footer__label {
+    @extend %title__header-h3;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: $body-light-text-color;
+  }
+  .footer__input {
+    @include animation(filter);
+    @include animation(border-color);
+    @extend %title__input;
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px 15px 16px;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    background: $footer-background-color;
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid $body-default-logo-color;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    }
+  }
+  .footer__button {
+    @extend %title__button;
+    @include animation(filter);
+    width: 200px;
+    height: 50px;
+    padding: 0 0 0 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover,
+    &:active,
+    &:focus {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+  .footer__label-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__icon-button {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    fill: $body-light-text-color;
+  }
+}

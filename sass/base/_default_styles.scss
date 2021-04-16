@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $body-default-text-color;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+@media screen and (min-width: $mobile) {
+  .container {
+    max-width: $mobile;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    max-width: $tablet;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    max-width: $desktop;
+  }
+}

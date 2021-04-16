@@ -1,0 +1,89 @@
+.header {
+  background-color: $body-default-background-color;
+  border-bottom: 1px solid $header-border-color;
+
+  .header__link-logo {
+    @extend %title__logo;
+    display: block;
+    text-decoration: none;
+    margin-right: 93px;
+  }
+  .header__link-logo-color {
+    color: $body-dark-header-color;
+  }
+  .header__navigation {
+    display: flex;
+    align-items: center;
+  }
+  .header__list {
+    list-style: none;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .header__list-margin {
+    margin-left: auto;
+  }
+  .header__list-center {
+    align-items: center;
+  }
+  .header__item-menu-margin:not(:last-child) {
+    margin-right: 50px;
+  }
+  .header__item-address-margin:not(:last-child) {
+    margin-right: 30px;
+  }
+  .header__link-navigation {
+    @include animation(color);
+    @extend %title__navigation;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    &.current,
+    &:hover,
+    &:active,
+    &:focus {
+      color: $body-default-logo-color;
+    }
+    &.current::after {
+      opacity: 1;
+    }
+    &::after {
+      @include animation(opacity);
+      content: '';
+      position: absolute;
+      display: block;
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      bottom: -1px;
+      background-color: $body-default-logo-color;
+      opacity: 0;
+    }
+  }
+
+  .header__icon {
+    @include animation(fill);
+    fill: $body-default-icon-color;
+    margin-right: 10px;
+  }
+  .header__link-address {
+    @include animation(color);
+    @extend %title__address;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $body-default-logo-color;
+    }
+    &:hover .header__icon,
+    &:active .header__icon,
+    &:focus .header__icon {
+      fill: $body-default-logo-color;
+    }
+  }
+}

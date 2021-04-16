@@ -1,0 +1,113 @@
+/* Секция списка проектов */
+.portfolio {
+  background-color: $body-default-background-color;
+  color: $body-default-text-color;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  .portfolio__filter {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+  }
+  .portfolio__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  .portfolio__button {
+    @include animation(color);
+    @include animation(box-shadow);
+    @include animation(background-color);
+    @extend %title__button-light;
+    background-color: $body-light-background-color;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px 6px 22px;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $body-default-logo-color;
+      color: $body-light-text-color;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .portfolio__list {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  .portfolio__list img {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .portfolio__card:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .portfolio__card:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+
+  .portfolio__about {
+    padding: 20px 24px 20px 24px;
+    border: 1px solid $portfolio-project-list-border-color;
+    border-top: 0;
+  }
+  .portfolio__header-about {
+    @extend %title__header-about;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  .portfolio__text-about {
+    @extend %title__text-label;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .portfolio__description {
+    @extend %title__description;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
+    background-color: $portfolio-project-list-hover-background-color;
+    transform: translatey(100%);
+    transition: transform 250ms ease;
+  }
+  .portfolio__link {
+    @include animation(box-shadow);
+    text-decoration: none;
+    display: block;
+    &:hover .portfolio__description {
+      transform: translatey(0);
+    }
+    &:hover .portfolio__image {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+  .portfolio__image {
+    @include animation(box-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,47 @@
+/* Секция "Чем мы занимаемся" */
+
+.functions {
+  padding-bottom: 94px;
+  background-color: $body-default-background-color;
+
+  .functions__title {
+    @extend %title__header-h2;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .functions__text {
+    @extend %title__header-light;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .functions__list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .functions__list img {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .functions__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .functions__label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background: $main-functions-label-background-color;
+  }
+}
