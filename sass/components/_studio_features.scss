@@ -1,29 +1,60 @@
 /* Секция "Особенности" */
 .features {
-  /*padding-top: 94px;
-  padding-bottom: 94px;*/
   background-color: $body-default-background-color;
+  padding-top: $section-padding-mobile;
+  padding-bottom: $section-padding-mobile;
+  @media screen and (min-width: $desktop) {
+    padding-top: $section-padding-desktop;
+    padding-bottom: $section-padding-desktop;
+  }
+
   .features__list {
-    /*display: flex;*/
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
     padding-right: 0;
     list-style: none;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
   .features__item {
     display: block;
     margin-top: 0;
     margin-bottom: 0px;
-    /*width: 270px;*/
-    /*&:not(:last-child) {
-      margin-right: 30px;
-    }*/
+    max-width: 450px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+      &:not(:nth-child(2n)) {
+        margin-right: 30px;
+      }
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
   .features__title {
     @extend %title__header-h3;
     margin-top: 0;
     margin-bottom: 10px;
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
   }
   .features__text {
     @extend %title__text;
@@ -39,95 +70,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
     height: 120px;
+    max-width: 450px;
     background: $body-light-background-color;
     border-radius: 4px;
-    margin-bottom: 30px;
-  }
-}
-@media screen and (min-width: $mobile) {
-  .features {
-    padding-top: $section-padding-mobile;
-    padding-bottom: $section-padding-mobile;
-    .features__list {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 0;
-    }
-    .features__item {
-      display: block;
-      margin-top: 0;
-      margin-bottom: 0px;
-      width: 450px;
-      &:not(:last-child) {
-        margin-bottom: 30px;
-      }
-    }
-    .features__view {
-      width: 450px;
-    }
-    .features__title {
-      text-align: center;
-    }
-  }
-}
-
-@media screen and (min-width: $tablet) {
-  .features {
-    padding-top: $section-padding-mobile;
-    padding-bottom: $section-padding-mobile;
-    .features__list {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 0;
-    }
-    .features__item {
-      display: block;
-      margin-top: 0;
-      margin-bottom: 0px;
-      width: 354px;
-      &:not(:nth-child(2n)) {
-        margin-right: 30px;
-      }
-      &:not(:nth-last-child(-n + 2)) {
-        margin-bottom: 30px;
-      }
-    }
-    .features__view {
+    @media screen and (min-width: $tablet) {
       width: 354px;
     }
-    .features__title {
-      text-align: left;
-    }
-  }
-}
-
-@media screen and (min-width: $desktop) {
-  .features {
-    padding-top: $section-padding-desktop;
-    padding-bottom: $section-padding-desktop;
-    .features__list {
-      display: flex;
-      flex-wrap: nowrap;
-    }
-    .features__item {
-      display: block;
-      margin-top: 0;
-      margin-bottom: 0px;
+    @media screen and (min-width: $desktop) {
       width: 270px;
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
-    }
-    .features__view {
-      width: 270px;
-    }
-    .features__title {
-      text-align: left;
     }
   }
 }
