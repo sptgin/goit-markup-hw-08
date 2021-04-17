@@ -1,39 +1,61 @@
 /* Секция 'Постоянные клиенты' */
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: $body-default-background-color;
-
+  padding-top: $section-padding-mobile;
+  padding-bottom: $section-padding-mobile;
+  @media screen and (min-width: $desktop) {
+    padding-top: $section-padding-desktop;
+    padding-bottom: $section-padding-desktop;
+  }
   .clients__title {
     @extend %title__header-h2;
     margin-top: 0;
     margin-bottom: 50px;
   }
   .clients__list {
-    display: flex;
     list-style: none;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
     margin-top: 0;
     margin-bottom: 0;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
   .clients__item {
     @include animation(border-color);
     display: block;
+    align-content: center;
     height: 90px;
-    width: 170px;
+    max-width: 170px;
     border: 1px solid $body-default-icon-color;
     box-sizing: border-box;
     border-radius: 4px;
+    margin-bottom: 30px;
     &:hover,
     &:active,
     &:focus {
       border-color: $body-default-logo-color;
     }
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (min-width: $tablet) {
+      &:not(:nth-child(3n)) {
+        margin-right: 30px;
+      }
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: $desktop) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
 

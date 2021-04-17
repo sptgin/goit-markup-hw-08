@@ -1,6 +1,9 @@
 /* Секция "Чем мы занимаемся" */
 
 .functions {
+  @media (max-width: $desktop) {
+    display: none;
+  }
   padding-bottom: 94px;
   background-color: $body-default-background-color;
 
