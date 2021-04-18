@@ -15,7 +15,9 @@
   }
   .clients__list {
     list-style: none;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-left: 0;
     padding-right: 0;
     margin-top: 0;
@@ -34,28 +36,27 @@
     display: block;
     align-content: center;
     height: 90px;
-    max-width: 170px;
+    min-width: 170px;
     border: 1px solid $body-default-icon-color;
     box-sizing: border-box;
     border-radius: 4px;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
+    background-color: red;
+    width: calc((100% - 15 * 10px) / 2);
+    margin: 15px;
     &:hover,
     &:active,
     &:focus {
       border-color: $body-default-logo-color;
     }
     @media screen and (min-width: $tablet) {
-      &:not(:nth-child(3n)) {
-        margin-right: 30px;
-      }
-      &:not(:nth-last-child(-n + 3)) {
-        margin-bottom: 30px;
-      }
+      width: calc((100% - 15 * 10px) / 3);
+      margin: 15px;
+      background-color: yellow;
     }
     @media screen and (min-width: $desktop) {
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
+      background-color: green;
+      width: calc((100% - 15 * 10px) / 6);
     }
   }
 
@@ -68,7 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    min-width: 170px;
     height: 90px;
     &:hover .clients__icon,
     &:active .clients__icon,

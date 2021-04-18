@@ -1352,6 +1352,14 @@ body {
 
 .team .team__list {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left: 0;
   padding-right: 0;
   margin-top: 0;
@@ -1386,7 +1394,7 @@ body {
 
 .team .team__item {
   display: block;
-  max-width: 270px;
+  width: 450px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1395,6 +1403,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .team .team__item {
+    max-width: 354px;
+  }
   .team .team__item:not(:nth-child(2n)) {
     margin-right: 30px;
   }
@@ -1404,6 +1415,9 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .team .team__item {
+    max-width: 270px;
+  }
   .team .team__item:not(:last-child) {
     margin-right: 30px;
   }
@@ -1493,7 +1507,14 @@ body {
 
 .clients .clients__list {
   list-style: none;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left: 0;
   padding-right: 0;
   margin-top: 0;
@@ -1527,12 +1548,15 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   height: 90px;
-  max-width: 170px;
+  min-width: 170px;
   border: 1px solid #afb1b8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
+  background-color: red;
+  width: calc((100% - 15 * 10px) / 2);
+  margin: 15px;
 }
 
 .clients .clients__item:hover, .clients .clients__item:active, .clients .clients__item:focus {
@@ -1540,17 +1564,17 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .clients .clients__item:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-  .clients .clients__item:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
+  .clients .clients__item {
+    width: calc((100% - 15 * 10px) / 3);
+    margin: 15px;
+    background-color: yellow;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .clients .clients__item:not(:last-child) {
-    margin-right: 30px;
+  .clients .clients__item {
+    background-color: green;
+    width: calc((100% - 15 * 10px) / 6);
   }
 }
 
@@ -1570,7 +1594,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
+  min-width: 170px;
   height: 90px;
 }
 
