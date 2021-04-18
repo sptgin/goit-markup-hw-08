@@ -12,8 +12,6 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 %title__address {
   color: $body-default-text-color;
@@ -21,10 +19,7 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
-
 %title__logo {
   color: $body-default-logo-color;
   font-family: 'Raleway', sans-serif;
@@ -32,15 +27,6 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-%title__navigation {
-  color: $body-default-header-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 %title__header-h1 {
   color: $body-light-text-color;

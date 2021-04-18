@@ -40,6 +40,8 @@
     position: relative;
     display: block;
     text-decoration: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
     &.current,
     &:hover,
     &:active,
@@ -72,6 +74,8 @@
   .header__link-address {
     @include animation(color);
     @extend %title__address;
+    padding-top: 32px;
+    padding-bottom: 32px;
     display: flex;
     align-items: center;
     text-decoration: none;
