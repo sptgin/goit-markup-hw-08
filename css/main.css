@@ -494,7 +494,21 @@ body {
 .header .header__link-logo {
   display: block;
   text-decoration: none;
-  margin-right: 93px;
+  margin-right: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .header .header__link-logo {
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header .header__link-logo {
+    margin-right: 93px;
+  }
 }
 
 .header .header__link-logo-color {
@@ -510,7 +524,7 @@ body {
           align-items: center;
 }
 
-.header .header__list {
+.header .header__list-menu {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -518,24 +532,51 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-}
-
-.header .header__list-margin {
-  margin-left: auto;
-}
-
-.header .header__list-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header .header__list-menu {
+    display: none;
+  }
+}
+
+.header .header__list-address {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .header .header__list-address {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header .header__list-address {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .header .header__item-menu-margin:not(:last-child) {
   margin-right: 50px;
 }
 
-.header .header__item-address-margin:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .header .header__item-address-margin:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .header .header__link-navigation {
@@ -581,15 +622,16 @@ body {
 .header .header__link-address {
   -webkit-transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 32px;
-  padding-bottom: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-decoration: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .header .header__link-address {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .header .header__link-address:hover, .header .header__link-address:active, .header .header__link-address:focus {
