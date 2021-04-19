@@ -9,17 +9,13 @@
   }
 
   .features__list {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: -15px;
     list-style: none;
-    @media screen and (min-width: $tablet) {
-      display: flex;
-      flex-wrap: wrap;
-    }
     @media screen and (min-width: $desktop) {
-      display: flex;
       flex-wrap: nowrap;
     }
   }
@@ -27,29 +23,22 @@
     display: block;
     margin-top: 0;
     margin-bottom: 0px;
-    max-width: 450px;
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    width: calc((100% - 2 * 15px));
+    @media screen and (max-width: 767px) {
+      margin: 15px;
     }
-    @media screen and (min-width: $tablet) {
-      width: 354px;
-      &:not(:nth-child(2n)) {
-        margin-right: 30px;
-      }
-      &:not(:nth-last-child(-n + 2)) {
-        margin-bottom: 30px;
-      }
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
     }
     @media screen and (min-width: $desktop) {
-      width: 270px;
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
+      width: calc((100% - 8 * 15px) / 4);
+      margin: 15px;
     }
   }
   .features__title {
     @extend %title__header-h3;
-    margin-top: 0;
+    margin-top: 30px;
     margin-bottom: 10px;
     text-align: center;
     @media screen and (min-width: $tablet) {
@@ -71,14 +60,7 @@
     justify-content: center;
     align-items: center;
     height: 120px;
-    max-width: 450px;
     background: $body-light-background-color;
     border-radius: 4px;
-    @media screen and (min-width: $tablet) {
-      width: 354px;
-    }
-    @media screen and (min-width: $desktop) {
-      width: 270px;
-    }
   }
 }
