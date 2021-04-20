@@ -1,7 +1,20 @@
 .header {
   background-color: $body-default-background-color;
   border-bottom: 1px solid $header-border-color;
+  position: relative;
 
+  .header__navigation {
+    display: flex;
+    align-items: center;
+  }
+  .header__navigation-menu {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
   .header__link-logo {
     @extend %title__logo;
     display: block;
@@ -19,17 +32,31 @@
   .header__link-logo-color {
     color: $body-dark-header-color;
   }
-  .header__menu {
+  .header__menu-button {
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: 0;
     background-color: transparent;
   }
-  .header__navigation {
-    display: flex;
-    align-items: center;
+  .header__menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+    background-color: $body-default-background-color;
+    &.is-open {
+      display: block;
+    }
   }
+
   .header__list-menu {
     @media screen and (max-width: $tablet) {
       display: none;
@@ -108,7 +135,13 @@
   .header__icon-close {
   }
 
-  .header__menu .header__icon-close {
+  .header__menu-button .header__icon-close {
+    display: none;
+  }
+  .header__menu-button.is-open .header__icon-close {
+    display: block;
+  }
+  .header__menu-button.is-open .header__icon-menu {
     display: none;
   }
   .header__link-address {
