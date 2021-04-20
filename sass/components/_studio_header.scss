@@ -19,6 +19,13 @@
   .header__link-logo-color {
     color: $body-dark-header-color;
   }
+  .header__menu {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
   .header__navigation {
     display: flex;
     align-items: center;
@@ -94,6 +101,15 @@
     @include animation(fill);
     fill: $body-default-icon-color;
     margin-right: 10px;
+  }
+
+  .header__icon-menu {
+  }
+  .header__icon-close {
+  }
+
+  .header__menu .header__icon-close {
+    display: none;
   }
   .header__link-address {
     @include animation(color);

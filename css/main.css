@@ -515,6 +515,16 @@ body {
   color: #000000;
 }
 
+.header .header__menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
 .header .header__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -622,6 +632,10 @@ body {
   transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
   fill: #afb1b8;
   margin-right: 10px;
+}
+
+.header .header__menu .header__icon-close {
+  display: none;
 }
 
 .header .header__link-address {
