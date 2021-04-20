@@ -12,16 +12,31 @@
     padding-left: 0;
     padding-right: 0;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: flex;
     list-style: none;
     text-align: center;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
   }
   .portfolio__item:not(:last-child) {
     margin-right: 8px;
   }
+  .portfolio__item:first-child {
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+
   .portfolio__button {
     @include animation(color);
     @include animation(box-shadow);

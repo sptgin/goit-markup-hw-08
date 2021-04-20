@@ -848,9 +848,16 @@ body {
 }
 
 .footer .footer__subscribe {
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: auto;
+  padding-left: auto;
   margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer__subscribe {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -901,7 +908,7 @@ body {
   transition: 250ms filter cubic-bezier(0.4, 0, 0.2, 1), 250ms -webkit-filter cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: 250ms border-color cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms border-color cubic-bezier(0.4, 0, 0.2, 1);
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px 15px 16px;
   margin-right: 0;
@@ -918,6 +925,12 @@ body {
   border: 1px solid #2196f3;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer__input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1722,21 +1735,49 @@ body {
   padding-left: 0;
   padding-right: 0;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio .portfolio__filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio .portfolio__filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
 .portfolio .portfolio__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.portfolio .portfolio__item:first-child {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio .portfolio__item:first-child {
+    margin-bottom: 0;
+  }
 }
 
 .portfolio .portfolio__button {
