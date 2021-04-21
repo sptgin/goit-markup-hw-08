@@ -26,41 +26,53 @@
             <a class="header__link-logo" href="./"
               >Web<span class="header__link-logo-color">Studio</span></a
             >
-            <button class="header__menu-button" type="button" data-menu-button>
+            <!-- Меню для экраном $mobile  -->
+            <button class="mmenu__menu-button" type="button" data-menu-button>
               <svg
-                class="header__menu"
+                class="mmenu__icon"
                 width="40px"
                 height="40px"
                 aria-label="mobile menu"
               >
                 <use
-                  class="header__icon-menu"
+                  class="mmenu__icon-menu"
                   href="./images/icons.svg#icon-menu"
                 ></use>
                 <use
-                  class="header__icon-close"
+                  class="mmenu__icon-close"
                   href="./images/icons.svg#icon-close-modal"
                 ></use>
               </svg>
             </button>
-            <div class="header__menu-container" data-menu>
-              <ul>
-                <li>Студия</li>
-                <li>Портфолио</li>
-                <li>Контакты</li>
+            <div class="mmenu__menu-container" data-menu>
+              <ul class="mmenu__nav">
+                <li class="mmenu__nav-item">Студия</li>
+                <li class="mmenu__nav-item">Портфолио</li>
+                <li class="mmenu__nav-item">Контакты</li>
               </ul>
-              <ul>
-                <li>info@devstudio.com</li>
-                <li>+38 096 111 11 11</li>
+              <ul class="mmenu__address">
+                <li class="mmenu__address-item">
+                  <a class="mmenu__address-phone" href="tel:+380961111111">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mmenu__address-item">
+                  <a
+                    class="mmenu__address-mail"
+                    href="mailto:info@devstudio.com"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
               </ul>
-              <ul>
-                <li>instagram</li>
-                <li>twitter</li>
-                <li>facebook</li>
-                <li>linkedin</li>
+              <ul class="mmenu__social">
+                <li class="mmenu__social-item">instagram</li>
+                <li class="mmenu__social-item">twitter</li>
+                <li class="mmenu__social-item">facebook</li>
+                <li class="mmenu__social-item">linkedin</li>
               </ul>
             </div>
-
+            <!-- Меню для экранов $tablet $desktop -->
             <ul class="header__list-menu">
               <li class="header__item-menu-margin">
                 <a class="header__link-navigation current" href="./">Студия</a>
