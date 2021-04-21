@@ -133,3 +133,32 @@
   text-align: center;
   letter-spacing: 0.03em;
 }
+%title__mmenu {
+  color: $body-default-header-color;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+%title__mmenu-mail {
+  color: $body-default-text-color;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+%title__mmenu-phone {
+  color: $body-default-logo-color;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+%title__mmenu-social {
+  color: $body-default-logo-color;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}

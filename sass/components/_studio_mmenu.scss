@@ -20,6 +20,7 @@
   }
 }
 .mmenu__menu-container {
+  z-index: 90;
   display: none;
   position: absolute;
   top: 0%;
@@ -28,8 +29,7 @@
   height: 796px;
   padding: 0;
   text-align: center;
-  //   background-color: $body-default-background-color;
-  background-color: darkgrey;
+  background-color: $body-default-background-color;
   @media screen and (max-width: $tablet) {
     display: none;
     &.is-open {
@@ -65,26 +65,50 @@
   padding-left: 40px;
 }
 .mmenu__nav-item {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  text-align: start;
-  color: #2196f3;
   &:not(:last-child) {
     margin-bottom: 32px;
   }
 }
 .mmenu__social-item {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
-  color: #2196f3;
+  @extend %title__mmenu-social;
+  &:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.mmenu__address-item {
+  text-align: left;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mmenu__address-phone {
+  @extend %title__mmenu-phone;
+  text-decoration: none;
+}
+.mmenu__address-mail {
+  @extend %title__mmenu-mail;
+  text-decoration: none;
+}
+
+.mmenu__link {
+  @include animation(color);
+  @extend %title__mmenu;
+  display: block;
+  text-decoration: none;
+  &.current,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $body-default-logo-color;
+  }
+}
+
+.mmenu__link-social {
+  @extend %title__mmenu-social;
+  text-decoration: none;
   &:not(:last-child) {
     padding-right: 10px;
     margin-right: 10px;
@@ -93,41 +117,10 @@
   &:hover,
   &:active,
   &:focus {
-    transform: rotate(90deg);
+    color: $body-default-logo-color;
   }
 }
 
-.mmenu__address-item {
-  text-align: start;
-  &:not(:last-child) {
-    margin-bottom: 32px;
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    color: blue;
-  }
-}
-.mmenu__address-phone {
-  text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: #2196f3;
-}
-.mmenu__address-mail {
-  text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: #757575;
-}
 .mmenu__icon-menu {
   @include animation(fill);
 }

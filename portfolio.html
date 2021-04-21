@@ -22,10 +22,101 @@
     <header class="header">
       <div class="container">
         <div class="header__navigation">
-          <nav class="header__navigation">
+          <nav class="header__navigation-menu">
             <a class="header__link-logo" href="./"
               >Web<span class="header__link-logo-color">Studio</span></a
             >
+            <!-- Меню для экраном $mobile  -->
+            <button class="mmenu__menu-button" type="button" data-menu-button>
+              <svg
+                class="mmenu__icon"
+                width="40px"
+                height="40px"
+                aria-label="mobile menu"
+              >
+                <use
+                  class="mmenu__icon-menu"
+                  href="./images/icons.svg#icon-menu"
+                ></use>
+                <use
+                  class="mmenu__icon-close"
+                  href="./images/icons.svg#icon-close-modal"
+                ></use>
+              </svg>
+            </button>
+            <div class="mmenu__menu-container" data-menu>
+              <ul class="mmenu__nav">
+                <li class="mmenu__nav-item">
+                  <a class="mmenu__link" href="./">Студия</a>
+                </li>
+                <li class="mmenu__nav-item">
+                  <a class="mmenu__link current" href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mmenu__nav-item">
+                  <a class="mmenu__link" href="./">Контакты</a>
+                </li>
+              </ul>
+              <ul class="mmenu__address">
+                <li class="mmenu__address-item">
+                  <a class="mmenu__address-phone" href="tel:+380961111111">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mmenu__address-item">
+                  <a
+                    class="mmenu__address-mail"
+                    href="mailto:info@devstudio.com"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mmenu__social">
+                <li class="mmenu__social-item">
+                  <a
+                    href="https://www.instagram.com"
+                    class="mmenu__link-social"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li class="mmenu__social-item">
+                  <a
+                    href="https://www.twitter.com"
+                    class="mmenu__link-social"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li class="mmenu__social-item">
+                  <a
+                    href="https://www.facebook.com"
+                    class="mmenu__link-social"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li class="mmenu__social-item">
+                  <a
+                    href="https://www.linkedin.com"
+                    class="mmenu__link-social"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Linkedin
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Меню для экранов $tablet $desktop -->
             <ul class="header__list-menu">
               <li class="header__item-menu-margin">
                 <a class="header__link-navigation" href="./">Студия</a>

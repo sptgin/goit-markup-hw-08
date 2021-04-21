@@ -117,10 +117,15 @@
     margin-left: 7px;
     padding: 0 0 0 0;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $body-default-text-color;
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+    }
   }
   .modal__input {
     @include animation(border-color);
@@ -158,21 +163,29 @@
   .modal__icon-checkbox {
     @include animation(opacity);
     position: absolute;
-    top: 18%;
-    left: 12px;
+    top: 10%;
+    left: 40px;
     width: 16px;
     height: 15px;
     fill: $body-default-header-color;
+    @media screen and (min-width: $desktop) {
+      top: 18%;
+      left: 12px;
+    }
   }
   .modal__icon-checkbox-checked {
     @include animation(opacity);
     position: absolute;
-    top: 18%;
-    left: 12px;
+    top: 10%;
+    left: 40px;
     width: 16px;
     height: 15px;
     fill: $body-default-header-color;
     opacity: 0;
+    @media screen and (min-width: $desktop) {
+      top: 18%;
+      left: 12px;
+    }
   }
   .modal__comment {
     @include animation(border-color);
