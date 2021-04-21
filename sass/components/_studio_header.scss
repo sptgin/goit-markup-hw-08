@@ -36,19 +36,28 @@
     @media screen and (min-width: $tablet) {
       display: none;
     }
+    z-index: 100;
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: 0;
     background-color: transparent;
+    &:hover .header__icon-menu,
+    &:active .header__icon-menu,
+    &:focus .header__icon-menu,
+    &:hover .header__icon-close,
+    &:active .header__icon-close,
+    &:focus .header__icon-close {
+      fill: $body-default-logo-color;
+    }
   }
   .header__menu-container {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0%;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 796px;
     padding: 20px;
     text-align: center;
     background-color: $body-default-background-color;
@@ -131,8 +140,10 @@
   }
 
   .header__icon-menu {
+    @include animation(fill);
   }
   .header__icon-close {
+    @include animation(fill);
   }
 
   .header__menu-button .header__icon-close {
