@@ -37,6 +37,15 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+%title__header-h1-mobile {
+  color: $body-light-text-color;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 %title__header-h2 {
   color: $body-default-header-color;
   font-weight: 700;
