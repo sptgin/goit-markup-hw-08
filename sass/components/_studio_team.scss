@@ -9,9 +9,13 @@
   }
 
   .team__title {
-    @extend %title__header-h2;
+    @extend %title__header-h2-mobile;
     margin-top: 0;
     margin-bottom: 50px;
+    @media screen and (min-width: $desktop) {
+      font-size: 36px;
+      line-height: 1.17;
+    }
   }
   .team__list {
     list-style: none;

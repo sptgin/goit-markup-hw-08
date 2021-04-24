@@ -50,10 +50,20 @@
   color: $body-default-header-color;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.16;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 }
+
+%title__header-h2-mobile {
+  color: $body-default-header-color;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 %title__header-h3 {
   color: $body-default-header-color;
   font-weight: 700;

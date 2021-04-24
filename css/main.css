@@ -312,11 +312,20 @@ summary {
   text-transform: uppercase;
 }
 
-.functions .functions__title, .team .team__title, .clients .clients__title {
+.functions .functions__title {
   color: #212121;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.16;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team .team__title, .clients .clients__title {
+  color: #212121;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -1587,6 +1596,13 @@ body {
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 1200px) {
+  .team .team__title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
 .team .team__list {
   list-style: none;
   display: -webkit-box;
@@ -1730,6 +1746,8 @@ body {
 @media screen and (min-width: 1200px) {
   .clients .clients__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 }
 

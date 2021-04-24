@@ -9,11 +9,13 @@
     padding-bottom: $section-padding-desktop;
   }
   .clients__title {
-    @extend %title__header-h2;
+    @extend %title__header-h2-mobile;
     margin-top: 0;
     margin-bottom: $section-title-padding-mobile;
     @media screen and (min-width: $desktop) {
       margin-bottom: $section-title-padding-desktop;
+      font-size: 36px;
+      line-height: 1.17;
     }
   }
   .clients__list {
