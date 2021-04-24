@@ -47,11 +47,11 @@
     &:focus {
       border-color: $body-default-logo-color;
     }
-    @media screen and (max-width: $desktop) {
+    @media screen and (min-width: $tablet) {
       width: calc((100% - 6 * 15px) / 3);
     }
     @media screen and (min-width: $desktop) {
-      width: calc((100% - 15 * 10px) / 6);
+      width: calc((100% - 12 * 15px) / 6);
     }
   }
   .clients__icon {
