@@ -36,12 +36,6 @@
   .portfolio__item:not(:last-child) {
     margin-right: 8px;
   }
-  // .portfolio__item:first-child {
-  //   margin-bottom: 20px;
-  //   @media screen and (min-width: $tablet) {
-  //     margin-bottom: 0;
-  //   }
-  // }
 
   .portfolio__button {
     @include animation(color);
