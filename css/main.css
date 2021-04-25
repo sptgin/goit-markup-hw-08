@@ -366,7 +366,7 @@ summary {
   letter-spacing: 0.03em;
 }
 
-.team .team__text, .portfolio .portfolio__text-about {
+.team .team__text {
   color: #757575;
   font-size: 16px;
   line-height: 1.18;
@@ -384,7 +384,7 @@ summary {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
 }
@@ -396,6 +396,13 @@ summary {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+.portfolio .portfolio__text-about {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .footer .footer__input {
@@ -1945,7 +1952,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
-  height: auto;
+  height: 294px;
 }
 
 .portfolio .portfolio__card {
@@ -1953,9 +1960,12 @@ body {
   margin: 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .portfolio .portfolio__card {
     width: calc((100% - 4 * 15px) / 2);
+  }
+  .portfolio .portfolio__card:first-child .portfolio__about {
+    height: 146px;
   }
 }
 
@@ -1966,7 +1976,9 @@ body {
 }
 
 .portfolio .portfolio__about {
-  padding: 20px 10px 20px 20px;
+  width: auto;
+  height: auto;
+  padding: 20px 20px 20px 20px;
   border: 1px solid #eeeeee;
   border-top: 0;
 }
@@ -1978,6 +1990,7 @@ body {
 }
 
 .portfolio .portfolio__text-about {
+  display: block;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -2012,6 +2025,7 @@ body {
   transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1), 250ms -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   display: block;
+  height: auto;
 }
 
 .portfolio .portfolio__link:hover .portfolio__description {

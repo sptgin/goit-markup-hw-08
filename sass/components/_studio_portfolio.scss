@@ -68,14 +68,17 @@
     margin-top: 0;
     margin-bottom: 0;
     width: 100%;
-    height: auto;
+    height: 294px;
   }
 
   .portfolio__card {
     width: calc(100% - 2 * 15px);
     margin: 15px;
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
       width: calc((100% - 4 * 15px) / 2);
+      &:first-child .portfolio__about {
+        height: 146px;
+      }
     }
     @media screen and (min-width: $desktop) {
       width: calc((100% - 6 * 15px) / 3);
@@ -83,7 +86,9 @@
   }
 
   .portfolio__about {
-    padding: 20px 10px 20px 20px;
+    width: auto;
+    height: auto;
+    padding: 20px 20px 20px 20px;
     border: 1px solid $portfolio-project-list-border-color;
     border-top: 0;
   }
@@ -94,7 +99,8 @@
     margin-bottom: 4px;
   }
   .portfolio__text-about {
-    @extend %title__text-label;
+    @extend %title__text-about;
+    display: block;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -117,6 +123,7 @@
     @include animation(box-shadow);
     text-decoration: none;
     display: block;
+    height: auto;
     &:hover .portfolio__description {
       transform: translatey(0);
     }
