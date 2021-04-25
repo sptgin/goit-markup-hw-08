@@ -2113,7 +2113,7 @@ body {
 }
 
 .mmenu__address {
-  margin-top: 300px;
+  margin-top: auto;
   margin-bottom: 0;
   padding-left: 40px;
   display: -webkit-box;
@@ -2135,6 +2135,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   justify-items: flex-start;
   list-style: none;
   margin-top: 64px;
