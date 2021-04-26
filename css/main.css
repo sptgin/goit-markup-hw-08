@@ -1256,12 +1256,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 448px;
   margin-bottom: 30px;
 }
@@ -1339,7 +1339,7 @@ body {
   -webkit-transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 0px;
   width: 16px;
   height: 15px;
@@ -1349,7 +1349,6 @@ body {
 @media screen and (min-width: 1200px) {
   .modal .modal__icon-checkbox {
     top: 18%;
-    left: 0px;
   }
 }
 
@@ -1357,7 +1356,7 @@ body {
   -webkit-transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 0px;
   width: 16px;
   height: 15px;
@@ -1368,7 +1367,6 @@ body {
 @media screen and (min-width: 1200px) {
   .modal .modal__icon-checkbox-checked {
     top: 18%;
-    left: 0px;
   }
 }
 

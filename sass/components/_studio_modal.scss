@@ -106,8 +106,8 @@
   .modal__checkbox-label {
     position: relative;
     display: flex;
-    align-items: baseline;
     justify-content: center;
+    align-items: center;
     max-width: 448px;
     margin-bottom: 30px;
   }
@@ -172,20 +172,19 @@
   .modal__icon-checkbox {
     @include animation(opacity);
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 0px;
     width: 16px;
     height: 15px;
     fill: $body-default-header-color;
     @media screen and (min-width: $desktop) {
       top: 18%;
-      left: 0px;
     }
   }
   .modal__icon-checkbox-checked {
     @include animation(opacity);
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 0px;
     width: 16px;
     height: 15px;
@@ -193,7 +192,6 @@
     opacity: 0;
     @media screen and (min-width: $desktop) {
       top: 18%;
-      left: 0px;
     }
   }
   .modal__comment {
