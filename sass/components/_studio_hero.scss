@@ -10,42 +10,24 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(
-      to left,
-      $main-hero-background,
-      40%,
-      transparent 100%
-    ),
-    url(../images/webstudio-bgimage-mob.jpg);
+  @include hero-background(url(../../images/webstudio-bgimage-mob.jpg));
   @media screen and (min-width: $tablet) {
-    background-image: linear-gradient(
-        to left,
-        $main-hero-background,
-        40%,
-        transparent 100%
-      ),
-      url(../images/webstudio-bgimage-tab.jpg);
+    @include hero-background(url(../../images/webstudio-bgimage-tab.jpg));
   }
   @media screen and (min-width: $desktop) {
-    background-image: linear-gradient(
-        to left,
-        $main-hero-background,
-        40%,
-        transparent 100%
-      ),
-      url(../images/webstudio-bgimage-desk.jpg);
+    @include hero-background(url(../../images/webstudio-bgimage-desk.jpg));
   }
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        to left,
-        $main-hero-background,
-        40%,
-        transparent 100%
-      ),
-      url(../images/webstudio-bgimage-desk2x.jpg);
+    @include hero-background(url(../../images/webstudio-bgimage-mob2x.jpg));
+    @media screen and (min-width: $tablet) {
+      @include hero-background(url(../../images/webstudio-bgimage-tab2x.jpg));
+    }
+    @media screen and (min-width: $desktop) {
+      @include hero-background(url(../../images/webstudio-bgimage-desk2x.jpg));
+    }
   }
 
   .hero__title {

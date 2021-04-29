@@ -1,3 +1,13 @@
 @mixin animation($object) {
   transition: 250ms $object cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@mixin hero-background($bg-image) {
+  background-image: linear-gradient(
+      to left,
+      $main-hero-background,
+      40%,
+      transparent 100%
+    ),
+    $bg-image;
+}
